@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Navbar from '@/components/Navbar';
 
 export default function AboutPage() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -110,40 +111,9 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-black">
       {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'
-      }`}>
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-12 h-12 bg-fourth-yellow rounded-full flex items-center justify-center">
-                <span className="text-black font-bold text-lg">4th</span>
-              </div>
-              <span className="text-xl font-heading text-black">Fourth Architects</span>
-            </Link>
-
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/services" className="text-gray-600 hover:text-black transition-colors">
-                Services
-              </Link>
-              <Link href="/projects" className="text-gray-600 hover:text-black transition-colors">
-                Projects
-              </Link>
-              <Link href="/about" className="text-fourth-yellow font-semibold">
-                About
-              </Link>
-              <Link href="/blog" className="text-gray-600 hover:text-black transition-colors">
-                Blog
-              </Link>
-              <Link href="/contact" className="bg-fourth-yellow text-black px-6 py-2 rounded hover:bg-yellow-400 transition-colors">
-                Contact
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-stone-50">
