@@ -409,8 +409,8 @@ export default function AboutPage() {
                   materials, and foster community connections.
                 </p>
                 <p>
-                  Every project begins with careful study of the site, the client's needs, and the
-                  broader cultural context. We design not just buildings, but environments that
+                  Every project begins with careful study of the site, the client&apos;s needs, and
+                  the broader cultural context. We design not just buildings, but environments that
                   enhance the daily life of their occupants while treading lightly on the earth.
                 </p>
                 <p>
@@ -427,7 +427,7 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-20 bg-stone-50">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-display mb-6">Let's Create Together</h2>
+          <h2 className="text-4xl md:text-5xl font-display mb-6">Let&apos;s Create Together</h2>
           <p className="text-xl text-gray-600 mb-8">
             Ready to embark on an architectural journey that celebrates both innovation and
             tradition?

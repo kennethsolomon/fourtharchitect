@@ -1,98 +1,101 @@
-'use client';
+'use client'
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Navbar from "@/components/Navbar";
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import Navbar from '@/components/Navbar'
 
 export default function ServicesPage() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const services = [
     {
-      title: "Architectural Design",
-      description: "Complete architectural design services from concept to construction documentation",
+      title: 'Architectural Design',
+      description:
+        'Complete architectural design services from concept to construction documentation',
       features: [
-        "Conceptual Design Development",
-        "3D Visualization & Renderings",
-        "Construction Documents",
-        "Building Permits & Approvals",
-        "Tropical Climate Adaptation"
+        'Conceptual Design Development',
+        '3D Visualization & Renderings',
+        'Construction Documents',
+        'Building Permits & Approvals',
+        'Tropical Climate Adaptation',
       ],
-      image: "https://architropics.com/wp-content/uploads/2020/06/YNE-House_02.jpg"
+      image: 'https://architropics.com/wp-content/uploads/2020/06/YNE-House_02.jpg',
     },
     {
-      title: "Interior Design",
-      description: "Creating beautiful and functional interior spaces that reflect your lifestyle",
+      title: 'Interior Design',
+      description: 'Creating beautiful and functional interior spaces that reflect your lifestyle',
       features: [
-        "Space Planning & Layout",
-        "Material & Finish Selection",
-        "Custom Furniture Design",
-        "Lighting Design",
-        "Project Management"
+        'Space Planning & Layout',
+        'Material & Finish Selection',
+        'Custom Furniture Design',
+        'Lighting Design',
+        'Project Management',
       ],
-      image: "https://images.squarespace-cdn.com/content/v1/5ac2ddf285ede15e39a57666/9d640d8c-d008-4f0f-aa43-af200eaa06f8/Design+Anthology+-+Owen+Residence+-+Atelier+Almario%2C+Philippines_DSF0175.jpg"
+      image:
+        'https://images.squarespace-cdn.com/content/v1/5ac2ddf285ede15e39a57666/9d640d8c-d008-4f0f-aa43-af200eaa06f8/Design+Anthology+-+Owen+Residence+-+Atelier+Almario%2C+Philippines_DSF0175.jpg',
     },
     {
-      title: "Sustainable Building",
-      description: "Environmentally conscious design solutions for the tropical climate",
+      title: 'Sustainable Building',
+      description: 'Environmentally conscious design solutions for the tropical climate',
       features: [
-        "Passive Cooling Strategies",
-        "Natural Ventilation Design",
-        "Renewable Energy Integration",
-        "Local Material Selection",
-        "Water Conservation Systems"
+        'Passive Cooling Strategies',
+        'Natural Ventilation Design',
+        'Renewable Energy Integration',
+        'Local Material Selection',
+        'Water Conservation Systems',
       ],
-      image: "https://livingasean.com/wp-content/uploads/2024/05/DESIGN-Casa-Borbon-7.jpg"
+      image: 'https://livingasean.com/wp-content/uploads/2024/05/DESIGN-Casa-Borbon-7.jpg',
     },
     {
-      title: "Project Management",
-      description: "Comprehensive project oversight from design to completion",
+      title: 'Project Management',
+      description: 'Comprehensive project oversight from design to completion',
       features: [
-        "Construction Administration",
-        "Quality Control & Inspection",
-        "Timeline & Budget Management",
-        "Contractor Coordination",
-        "Final Project Delivery"
+        'Construction Administration',
+        'Quality Control & Inspection',
+        'Timeline & Budget Management',
+        'Contractor Coordination',
+        'Final Project Delivery',
       ],
-      image: "https://i0.wp.com/architropics.com/wp-content/uploads/2021/07/veranda-house-HOV_07.jpg?resize=600%2C821&ssl=1"
-    }
-  ];
+      image:
+        'https://i0.wp.com/architropics.com/wp-content/uploads/2021/07/veranda-house-HOV_07.jpg?resize=600%2C821&ssl=1',
+    },
+  ]
 
   const process = [
     {
-      step: "01",
-      title: "Initial Consultation",
-      description: "Understanding your vision, requirements, and budget"
+      step: '01',
+      title: 'Initial Consultation',
+      description: 'Understanding your vision, requirements, and budget',
     },
     {
-      step: "02",
-      title: "Concept Development",
-      description: "Creating initial design concepts and 3D visualizations"
+      step: '02',
+      title: 'Concept Development',
+      description: 'Creating initial design concepts and 3D visualizations',
     },
     {
-      step: "03",
-      title: "Design Development",
-      description: "Refining the design with detailed drawings and specifications"
+      step: '03',
+      title: 'Design Development',
+      description: 'Refining the design with detailed drawings and specifications',
     },
     {
-      step: "04",
-      title: "Construction Documentation",
-      description: "Preparing complete construction drawings and permits"
+      step: '04',
+      title: 'Construction Documentation',
+      description: 'Preparing complete construction drawings and permits',
     },
     {
-      step: "05",
-      title: "Construction Administration",
-      description: "Overseeing construction to ensure design integrity"
-    }
-  ];
+      step: '05',
+      title: 'Construction Administration',
+      description: 'Overseeing construction to ensure design integrity',
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-white text-black">
@@ -102,9 +105,22 @@ export default function ServicesPage() {
       <section className="pt-24 pb-16 bg-stone-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <Link href="/" className="inline-flex items-center text-gray-600 hover:text-black mb-8 group">
-              <svg className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            <Link
+              href="/"
+              className="inline-flex items-center text-gray-600 hover:text-black mb-8 group"
+            >
+              <svg
+                className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                />
               </svg>
               BACK TO HOME
             </Link>
@@ -112,7 +128,8 @@ export default function ServicesPage() {
               FOURTH <span className="text-fourth-yellow">SERVICES</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive architectural and design services tailored for the tropical Philippine climate
+              Comprehensive architectural and design services tailored for the tropical Philippine
+              climate
             </p>
           </div>
         </div>
@@ -123,7 +140,10 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid gap-16">
             {services.map((service, index) => (
-              <div key={index} className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'md:grid-flow-col-dense' : ''}`}>
+              <div
+                key={index}
+                className={`grid md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'md:grid-flow-col-dense' : ''}`}
+              >
                 <div className={index % 2 === 1 ? 'md:col-start-2' : ''}>
                   <div className="mb-6">
                     <span className="text-sm text-fourth-yellow font-semibold tracking-wide">
@@ -187,13 +207,19 @@ export default function ServicesPage() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-display mb-6">Ready to Start Your Project?</h2>
           <p className="text-xl text-gray-600 mb-8">
-            Let's discuss how we can bring your architectural vision to life
+            Let&apos;s discuss how we can bring your architectural vision to life
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-fourth-yellow text-black px-8 py-3 rounded font-semibold hover:bg-yellow-400 transition-colors">
+            <Link
+              href="/contact"
+              className="bg-fourth-yellow text-black px-8 py-3 rounded font-semibold hover:bg-yellow-400 transition-colors"
+            >
               Contact Us
             </Link>
-            <Link href="/projects" className="border border-gray-300 text-gray-700 px-8 py-3 rounded font-semibold hover:border-fourth-yellow hover:text-fourth-yellow transition-colors">
+            <Link
+              href="/projects"
+              className="border border-gray-300 text-gray-700 px-8 py-3 rounded font-semibold hover:border-fourth-yellow hover:text-fourth-yellow transition-colors"
+            >
               View Our Work
             </Link>
           </div>
@@ -210,7 +236,10 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
               <h4 className="text-fourth-yellow font-semibold mb-4">E:</h4>
-              <a href="mailto:office@fourtharchitects.com" className="hover:text-fourth-yellow transition-colors">
+              <a
+                href="mailto:office@fourtharchitects.com"
+                className="hover:text-fourth-yellow transition-colors"
+              >
                 office@fourtharchitects.com
               </a>
             </div>
@@ -234,5 +263,5 @@ export default function ServicesPage() {
         </div>
       </footer>
     </div>
-  );
+  )
 }
