@@ -15,6 +15,11 @@ export default function ContactPage() {
     services: '',
     timeline: '',
     message: '',
+    lotType: '',
+    propertyType: '',
+    lotArea: '',
+    projectBudget: '',
+    howSoon: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
@@ -59,6 +64,11 @@ export default function ContactPage() {
         services: '',
         timeline: '',
         message: '',
+        lotType: '',
+        propertyType: '',
+        lotArea: '',
+        projectBudget: '',
+        howSoon: '',
       })
     } catch (error) {
       setSubmitStatus('error')
@@ -234,7 +244,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <label
-                      htmlFor="timeline"
+                      htmlFor="lotType"
                       className="block text-sm font-semibold text-gray-700 mb-2"
                     >
                       Lot Type
@@ -304,7 +314,7 @@ export default function ContactPage() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label
-                      htmlFor="name"
+                      htmlFor="lotArea"
                       className="block text-sm font-semibold text-gray-700 mb-2"
                     >
                       Lot Area
