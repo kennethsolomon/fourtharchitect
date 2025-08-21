@@ -29,7 +29,7 @@ export async function generateStaticParams() {
   })
 
   const params = posts.docs.map(({ slug }) => {
-    return { slug }
+    return { slug: slug }
   })
 
   return params
