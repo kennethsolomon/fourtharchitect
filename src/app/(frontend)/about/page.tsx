@@ -398,7 +398,9 @@ export default function AboutPage() {
               <h2 className="text-4xl md:text-5xl font-display mb-6">OUR PHILOSOPHY</h2>
               <div className="space-y-6 text-gray-600">
                 <p>
-                  <em>"Architecture should be a response to place, climate, and culture."</em>
+                  <em>
+                    &quot;Architecture should be a response to place, climate, and culture.&quot;
+                  </em>
                 </p>
                 <p>
                   We believe that great architecture emerges from understanding the unique

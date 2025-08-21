@@ -99,8 +99,8 @@ export default function ContactPage() {
               CONTACT <span className="text-fourth-yellow">US</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to bring your architectural vision to life? Let's start the conversation about
-              your next project.
+              Ready to bring your architectural vision to life? Let&apos;s start the conversation
+              about your next project.
             </p>
           </div>
         </div>
@@ -117,7 +117,7 @@ export default function ContactPage() {
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
                   <p className="text-green-800">
-                    Thank you for your inquiry! We'll get back to you within 24 hours.
+                    Thank you for your inquiry! We&apos;ll get back to you within 24 hours.
                   </p>
                 </div>
               )}
