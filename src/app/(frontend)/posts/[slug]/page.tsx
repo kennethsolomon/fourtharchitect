@@ -28,9 +28,11 @@ export async function generateStaticParams() {
     },
   })
 
-  const params = posts.docs.map(({ slug }) => {
-    return { slug: slug }
-  })
+  const params = posts.docs
+    .filter(({ slug }) => slug && typeof slug === 'string')
+    .map(({ slug }) => ({
+      slug: slug as string,
+    }))
 
   return params
 }
